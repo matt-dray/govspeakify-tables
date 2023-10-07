@@ -50,3 +50,6 @@ rsconnect/
 
 # macOS file
 .DS_Store
+
+# README preview version
+README.html
