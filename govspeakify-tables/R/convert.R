@@ -59,3 +59,9 @@ table_to_govspeak <- function(
   return(vec)
   
 }
+
+# Accept a string of comma-separated numbers for rows that contain totals
+str2num <- function(string) {
+  string <- gsub(" ", "", string)
+  as.numeric(strsplit(string, ",")[[1]])
+}
