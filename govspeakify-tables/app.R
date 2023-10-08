@@ -10,7 +10,9 @@ ui <- fluidPage(
   rclipboardSetup(),
   
   # Explanation
-  HTML("<p>This is a minimal proof-of-concept Shinylive app. Find the source <a href='https://github.com/matt-dray/govspeakify-tables'>on GitHub</a>. Read more in <a href='https://www.rostrum.blog/posts/2023-06-21-wordup-tables/'>a related blog post</a>.</p>"),
+  HTML("Convert a pasted Word table to <a href='https://govspeak-preview.publishing.service.gov.uk/guide'>Govspeak Markdown</a>."),
+  p(),
+  HTML("This is a minimal proof-of-concept <a href='https://github.com/posit-dev/shinylive'>Shinylive</a> app. Find the source <a href='https://github.com/matt-dray/govspeakify-tables'>on GitHub</a>. Read more in <a href='https://www.rostrum.blog/posts/2023-10-08-govspeakify-tables/'>a related blog post</a>.</p>"),
   
   # Expandable section: demo table
   HTML("<p><details><summary>Click here for an example table to copy.</summary>"),
@@ -21,17 +23,17 @@ ui <- fluidPage(
   textAreaInput("text_in", NULL, placeholder = "Paste a Word table"),
   
   # Expandable section: Govspeak table style options
-  HTML("<p><details><summary>Click here for table options.</summary>"),
-  checkboxInput("checkbox_row_titles", "Table has row titles (i.e. the first column contains headers)", value = FALSE, width = "100%"),
-  p("Provide the numeric values for rows that contain totals (comma separated):"),
-  textInput("text_row_totals", NULL, placeholder = "4"),
+  HTML("<p><details><summary>Click here to change the table options.</summary>"),
+  checkboxInput("checkbox_row_titles", "Table has row titles (i.e. the first column is a header column)", value = FALSE, width = "100%"),
+  p("Provide (comma-separated) numeric values for rows that contain totals:"),
+  textInput("text_row_totals", NULL, placeholder = "e.g. 4"),
   p("Provide a regular expression for characters to ignore when evaluating numeric columns:"),
   textInput("text_regex", NULL, value = ",|%|\\[.\\]"),
   HTML("</details></p>"),
   p(),
   
   # Click button, receive output
-  actionButton("button_convert", "Convert to Govspeak", icon("table-cells")), 
+  actionButton("button_convert", "Convert to Govspeak", icon("table")), 
   verbatimTextOutput("text_out"),
   uiOutput("button_clip")
   
@@ -43,7 +45,7 @@ server <- function(input, output, session) {
   output$example_table <- renderTable(
     data.frame(
       ColA = c("X", "Y", "Z", "Totals"),
-      ColB = c(100, 200, 300, 600),
+      ColB = c(100L, 200L, 300L, 600L),
       ColC = c("1,000", "2,000", "3,000", "6,000"),
       ColD = c("1%", "2%", "3%", "6%"),
       ColE = c("15", "[z]", "[c]", "[c]")
