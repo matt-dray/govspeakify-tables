@@ -7,7 +7,7 @@
 [![Blog post](https://img.shields.io/badge/rostrum.blog-post-008900?labelColor=000000&logo=data%3Aimage%2Fgif%3Bbase64%2CR0lGODlhEAAQAPEAAAAAABWCBAAAAAAAACH5BAlkAAIAIf8LTkVUU0NBUEUyLjADAQAAACwAAAAAEAAQAAAC55QkISIiEoQQQgghRBBCiCAIgiAIgiAIQiAIgSAIgiAIQiAIgRAEQiAQBAQCgUAQEAQEgYAgIAgIBAKBQBAQCAKBQEAgCAgEAoFAIAgEBAKBIBAQCAQCgUAgEAgCgUBAICAgICAgIBAgEBAgEBAgEBAgECAgICAgECAQIBAQIBAgECAgICAgICAgECAQECAQICAgICAgICAgEBAgEBAgEBAgICAgICAgECAQIBAQIBAgECAgICAgIBAgECAQECAQIBAgICAgIBAgIBAgEBAgECAgECAgICAgICAgECAgECAgQIAAAQIKAAAh%2BQQJZAACACwAAAAAEAAQAAAC55QkIiESIoQQQgghhAhCBCEIgiAIgiAIQiAIgSAIgiAIQiAIgRAEQiAQBAQCgUAQEAQEgYAgIAgIBAKBQBAQCAKBQEAgCAgEAoFAIAgEBAKBIBAQCAQCgUAgEAgCgUBAICAgICAgIBAgEBAgEBAgEBAgECAgICAgECAQIBAQIBAgECAgICAgICAgECAQECAQICAgICAgICAgEBAgEBAgEBAgICAgICAgECAQIBAQIBAgECAgICAgIBAgECAQECAQIBAgICAgIBAgIBAgEBAgECAgECAgICAgICAgECAgECAgQIAAAQIKAAA7)](https://www.rostrum.blog/posts/2023-10-08-govspeakify-tables/)
 <!-- badges: end -->
 
-A [demo R Shiny app](https://matt-dray.github.io/govspeakify-tables/) to convert a pasted table to [Govspeak Markdown](https://govspeak-preview.publishing.service.gov.uk/guide).
+A [demo R Shiny app](https://matt-dray.github.io/govspeakify-tables/) (takes a few moments to load) to convert a pasted table to [Govspeak Markdown](https://govspeak-preview.publishing.service.gov.uk/guide).
 
 This is a proof-of-concept for [Shinylive](https://posit-dev.github.io/r-shinylive/), which means all the R code is executed within the user's browser without the need for a server. I wrote more about this in [a blog post](https://www.rostrum.blog/posts/2023-10-08-govspeakify-tables/).
 
