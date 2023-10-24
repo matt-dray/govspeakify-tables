@@ -7,7 +7,15 @@ ui <- fluidPage(
   titlePanel("Govspeakify Tables"),
   title = "Govspeakify Tables",
   
+  # Insert clipboard.js into header
   rclipboardSetup(),
+  
+  # CSS to ensure that triangle appears to indicate expandable details-block
+  tags$style(
+    "summary {
+       display: list-item
+    }"
+  ),
   
   # Explanation
   HTML("Convert a pasted Word table to <a href='https://govspeak-preview.publishing.service.gov.uk/guide'>Govspeak Markdown</a>."),
